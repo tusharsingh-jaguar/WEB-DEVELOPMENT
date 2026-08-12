@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>FORMS</title>
+</head>
+
+<body>
+    <!-- FORM -->
+    <div>
+        <h4>Codewithharry website forms</h4>
+        <a href="https://www.codewithharry.com/tutorial/html-forms">Codewithharry forms</a>
+
+        <h1>FORMS</h1>
+        <!-- form elements = "input","button","textarea","select" -->
+
+        <form action="ok.php">
+            <!-- It means that data collected from this form will go in ok.php which is watching backend and handle that data -->
+
+            <!-- INPUT -->
+            <h3>Name</h3>
+            <label for="username">Enter your username</label><br>
+            <input type="text" id="username" placeholder="Enter your name"><br>
+            <label>
+                <h3>Age</h3> <input type="number" placeholder="Enter your age"><br>
+            </label>
+            <h3>Password</h3> <input type="password" placeholder="Enter your password"><br>
+            <!-- input types = "text","password","number","time","color","range" -->
+
+            <!-- name=value pair goes to backend where value is the text we types and name is kept for what the value stands for ex. name="hobbies", value="badminton" -->
+            <h3>section</h3>
+            <label for="sectionidA">
+                <input type="radio" name="section" id="sectionidA" value="section A">Section A
+            </label>
+            <label for="sectionidB">
+                <input type="radio" name="section" id="sectionidB" value="section B">Section B
+            </label>
+            <label for="sectionidC">
+                <input type="radio" name="section" id="sectionidC" value="section C">Section C
+            </label>
+
+            <!-- i write label spelling wrong -->
+            <!-- label : builds a connection between the text and input box such that when we choose text then also it chooses the input -->
+
+            <!-- for input type="radio" wirte name, id and value 
+            ✅ name
+            Groups radio buttons together.
+            All radio inputs with the same name act as a single choice (only one can be selected).
+            Example: name="gender" groups all gender radios.
+            ✅ id
+            Gives the input a unique identifier in the HTML document.
+            Mainly used to connect the <label> to the input using for="id".
+                Not required for grouping; it does not store any address.
+            ✅ value
+            The actual data sent to the server/form handler when the radio is selected.
+            Example: If value="male", the submitted form sends: gender=male. -->
+
+            <!-- if name of two or three radio buttons are same like above then only one of them can be selected -->
+            <!-- name:- whatever name we give to the input element after going in backend, backend will recognize that element from that name -->
+            <!-- if label for="plidA" is different from input id="plid1" then it will not work so for and id should be same -->
+            <!-- id is an unique identifier of a html element -->
+            <!-- without lable Section A written at end will just be a word it will not be included in radio and if we click on it the radio will not be selected -->
+            <!-- label is used to give a name to input -->
+            <!-- for="sectionidA" in label is used:-
+            What it does:-
+            ->The value of for must match the id of the form control.
+            ->Clicking the label will automatically focus or activate the associated input.
+            ->It improves usability and accessibility (e.g., for screen readers).  -->
+            <br>
+            <h3>food</h3>
+            <input type="checkbox" name="canteen" id="vegfood" class="red" value="veg">
+            <label for="vegfood">veg food</label>
+            <input type="checkbox" name="canteen" id="nvegfood" class="blue" value="nonveg">
+            <label for="nvegfood">non veg food</label><br><br>
+
+            <!-- BUTTON -->
+            <!-- outside form we have to define the function of that button
+              inside form its default fuction is to submit or pass the data to action="ok.php" file. -->
+            <!-- Types : "submit","button","reset : resets everything in the form." -->
+            <h3>BUTTONS</h3>
+            <button>
+                Submit
+            </button><br>
+            <button type="submit">
+                submit_type
+            </button><br>
+            <button type="button">
+                button_type
+            </button><br>
+            <button type="reset">
+                reset_type
+            </button><br>
+            <!-- input as a button -->
+            <input type="button" value="click me"><br>
+            <input type="submit"><br><br>
+
+            <!-- Range -->
+            <input type="range" min="0" max="100" id="marks" name="marks">
+            <label for="marks">Marks</label><br>
+            <input type="range" name="vol" id="vol" min="0" max="100" step="10">
+            <label for="vol">Volumn</label>
+
+            <!-- TEXTAREA -->
+            <h3>explain</h3>
+            <br> <textarea name="explain" id="explain" cols="50" rows="10"
+                placeholder="explain why you want to join"></textarea>
+
+            <!-- SELECT -->
+            <br> <select name="car" id="car">
+                <option value="no car">select your car</option>
+                <option value="omni">omni</option>
+                <option value="ferrari">ferrari</option>
+                <option value="toyota">fortuner</option>
+            </select>
+            <hr>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">mdn for input element</a>
+            <hr>
+            <hr>
+
+        </form>
+    </div>
+
+</body>
+
+</html>
+
+<hr>
+<!-- Search in Youtube -->
+<form action="https://www.youtube.com/results">
+    <input type="text" name="search_query" id="youtube_search" placeholder="search in youtube"><br>
+    <button>search</button>
+</form>
+<hr>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID and Classes</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<!-- pracical ch-4 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAVEL WEBSITE</title>
+</head>
+
+<body>
+    <header>
+        <h1>welcome to our website</h1>
+        <h2>TRAVEL FRIEND</h2>
+        <p>we are your travel friend, we will guide you towards your destination.</p>
+    </header>
+    <main>
+        <div>
+            <form action="opdopy"></form>
+            <h3>Personal info.</h3>
+            <h4>your name</h4> <input type="text" placeholder="Enter your name">
+            <h4>email id</h4><input type="text" placeholder="Enter your email id">
+            <h4>phone no.</h4><input type="number" placeholder="Enter your phone no.">
+            <h4>age</h4><input type="number" placeholder="Enter your age">
+
+            <h3>travel preference</h3>
+            <h4>place you want to visit</h4>
+            <label for="paris">
+                <input type="radio" name="places" value="places" id="paris">Paris
+            </label>
+            <input type="radio" name="places" value="places" id="italy">
+            <label for="italy">Italy</label>
+            <input type="radio" name="places" value="places" id="india">
+            <label for="india">India</label>
+            <h3>food preference</h3>
+            <h4>food you want to eat</h4>
+            <label for="cury rice">
+                <input type="checkbox" name="food" value="food" id="cury rice">curry rice
+            </label>
+            <label for="nonveg">
+                <input type="checkbox" name="food" value="food" id="nonveg">nonveg
+            </label>
+            <label for="beverages">
+                <input type="checkbox" name="food" value="food" id="beverages">beverages
+            </label>
+            </form>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

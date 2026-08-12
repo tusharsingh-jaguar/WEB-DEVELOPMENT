@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lists and tables</title>
+</head>
+
+<body>
+    <div>
+        <H1>LISTS</H1>
+        <!-- LISTS  -->
+        <!-- unordered list  -->
+        <h2>Unordered list</h2>
+        <UL>
+            <li>home</li>
+            <li>about</li>
+            <li>name</li>
+            <li>support</li>
+        </UL>
+        <!-- default type is disk -->
+        <UL type="square">
+            <li>home</li>
+        </UL>
+        <UL type="circle">
+            <li>home</li>
+        </UL>
+        <!-- type="disk"/"square"/"circle" -->
+        <!-- ordered list  -->
+         <h2>Ordered list</h2>
+        <ol>
+            <li>home</li>
+            <li>about</li>
+            <li>name</li>
+            <li>support</li>
+        </ol>
+        <ol type="i">
+            <li>home</li>
+            <li>about</li>
+        </ol>
+        <ol type="A">
+            <li>home</li>
+            <li>about</li>
+        </ol>
+        <!-- definition list (consist of definition term and definition definition) -->
+         <h2>Definition list</h2>
+        <dl>
+            <dt>HTML</dt>
+            <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex quidem error sit quaerat facilis possimus?</dd>
+            <dt>CSS</dt>
+            <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, laboriosam.</dd>
+            <dt>JAVASCRIPT</dt>
+            <dd>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis odio aliquid ex quisquam quaerat laudantium nulla cumque dolorem iste ut!<dd>
+        </dl>
+    </div>
+    <hr>
+    <!-- type="1"/"i"/"I"/"a"/"A" -->
+    <!-- TABLES -->
+    <div>
+        <h1>TABLES</h1>
+        <table border="black">
+            <captions>
+                <h3>fav. pc games</h3>
+            </captions>
+            <captions>fav. pc games</captions>
+            <thead>
+                <tr>
+                    <th>roll no.</th>
+                    <th>name</th>
+                    <th>class</th>
+                    <th>fav. pc game</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>tushar</td>
+                    <td>12th</td>
+                    <td>minecraft</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>rahul</td>
+                    <td>11th</td>
+                    <td>valorant</td>
+                </tr>
+            </tbody>
+            <tfoot></tfoot>
+        </table>
+    </div>
+    <hr>
+    <div>
+        <table border="black">
+            <tr>
+                <th rowspan="2">roll no.</th>
+                <th rowspan="2">names</th>
+                <th colspan="3">scores</th>
+                <!-- by  using colspan="3" scores column takes space of 3 columns -->
+            </tr>
+            <tr>
+                <th>pc</th>
+                <th>mobile</th>
+                <th>PS5</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>tushar</td>
+                <td>10</td>
+                <td>10</td>
+                <td rowspan="2">3</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>aashish</td>
+                <td>3</td>
+                <td>5</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

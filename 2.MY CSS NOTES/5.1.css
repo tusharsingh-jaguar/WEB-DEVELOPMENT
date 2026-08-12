@@ -1,0 +1,51 @@
+#div1>h2 {
+    text-align: center;
+}
+#div1>p {
+    text-align: right;
+}
+#div1>#specialpara {
+    text-align: justify;
+}
+#div2>#a {
+    font-weight: normal;
+}
+#div2>#b {
+    font-weight: 400;
+}
+#div2>#c {
+    font-weight: bold;
+}
+#div2>#d {
+    font-weight: 700;
+}
+#div2>#e {
+    font-weight: bolder;
+}
+#div2>#f {
+    font-weight: 1000;
+}
+#div3>#A {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+}
+#div3>#B {
+    text-decoration: overline;
+}
+#div3>#C {
+    text-decoration: line-through;
+}
+#div3>#D {
+    text-decoration: dotted red underline;
+}
+#div3>a {
+    text-decoration: none;
+    /* Used to remove underline from link */
+}
+#div4 >#p1 {
+    line-height:3;
+    letter-spacing : 5px;
+}
+#div4 >#p2 {
+    line-height:0.5;
+}

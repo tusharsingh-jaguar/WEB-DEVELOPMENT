@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS box model</title>
+    <!-- Box Model -->
+    <!-- 
+    margin
+    border
+    padding
+    content
+    padding
+    border
+    margin -->
+    <style>
+        * {
+            margin:0;
+            padding:0;
+        }
+
+        .box {
+            background-color: pink;
+        }
+        .box1{
+            color:red;
+            padding:10px;
+            margin:25px;
+            border: 3px solid black;
+            height:200px;
+            box-sizing:border-box;
+            /* if we don't write box-sizing:border-box then only content will be taking height of 200px and total height will be more after adding padding and border */
+            /* after writing box-sizing:border-box the content+padding+border height will be 200px */
+        }
+        .box2{
+            color: blueviolet;
+            padding:10px;
+            margin:25px;
+            border: 3px solid blue;
+            height:200px;
+            box-sizing:border-box;
+        }
+        /* margin-colapse --> if margin of two elements is overlapping then they will colapse and the max. margin will be applied in b/w them. */
+    </style>
+</head>
+
+<body>
+    <div class="box box1">
+        i am a box.
+    </div>
+    <div class="box box2">
+        i am also a box.
+    </div>
+</body>
+
+</html>

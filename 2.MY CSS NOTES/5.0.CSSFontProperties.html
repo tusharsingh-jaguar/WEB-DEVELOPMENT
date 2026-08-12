@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FONTS</title>
+    <style>
+        /* cssfontstack.com - for different font families. */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        /*this will import poppins from google fonts*/
+        #id1 {
+            /* font properties */
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-style: italic;
+            font-size: 20px;
+            font-weight: 500;
+            text-decoration: underline overline;
+        }
+
+        h2 {
+            text-transform: uppercase;
+            text-decoration: underline;
+            text-decoration-color: red;
+            text-decoration-style: dotted;
+            text-decoration-thickness: 7px;
+            text-indent: 40px;
+            text-align: center;
+        }
+
+        p {
+            line-height: 4;
+            /*it will give spacing b/w line (here 4 means 400%) */
+            letter-spacing: 4px;
+            /*it will give spacing b/w letters*/
+        }
+
+        h1 {
+            font-family: "Poppins", sans-serif;
+            /*this is by importing font from google fonts*/
+        }
+
+        .lorem {
+            border: 2px solid blue;
+            width: 50px;
+            text-overflow: ellipsis;
+            /*clip-it will clip words ahead of border*/
+            /*ellipsis-it will show dots as letters ahead of dorder*/
+            overflow: hidden;
+        }
+
+        .lorem1 {
+            border: 2px solid red;
+            width: 150px;
+            word-break: break-all;
+            /*it will break the words*/
+        }
+
+        /* fonts after impact are fall-back fonts (they will be applied if impact is not available in system)*/
+    </style>
+</head>
+
+<body>
+    <!-- https://codepen.io/web-dot-dev/pen/yLojraG - link to watch all fonts -->
+    <h1>FONTS</h1>
+    <h2>about Fonts</h2>
+    <p id="id1">this is a font.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque omnis, fuga modi tenetur dolores odio
+        exercitationem eveniet. Temporibus molestiae veniam facere optio pariatur.</p>
+    <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quaerat optio hic.</p>
+    <p class="lorem1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quaerat optio hic.</p>
+</body>
+
+</html>

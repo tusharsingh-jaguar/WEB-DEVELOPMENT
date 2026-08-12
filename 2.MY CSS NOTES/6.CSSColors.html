@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Colors</title>
+    <style>
+        /* https://codepen.io/web-dot-dev/pen/ZELGraM - this is codepen for colors */
+
+        h1 {
+            color: red;
+        }
+
+        #id1 {
+            color: darkcyan;
+        }
+
+        #id2 {
+            color: #13D5F0;
+            /* Hexadecimal system : 1,2,3,_ _ _, 9,A,B,C,D,E,F; color: #rrggbb; also short form like : #fff (#ffffff) or #0f0 (#00ff00)  */
+        }
+
+        #id3 {
+            color: rgb(150, 45, 152)
+        }
+
+        #id4 {
+            color: rgba(251, 3, 255, 0.282)
+        }
+
+        #id5 {
+            color: hsl(36, 89%, 45%)
+        }
+
+        #id6 {
+            background-color: rgb(255, 0, 153);
+        }
+        #id7 {
+            background-color: red;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>this is for colors</h1>
+    <h2>Ways to give colors to a text:</h2>
+    <ol>
+        <li id="id1">color keywords</li>
+        <li id="id2">hex color code</li> <!-- go on hex color code on google it will give you a hex code -->
+        <li id="id3">RGB</li>
+        <li id="id4">RGBA</li> <!-- A is alpha means opacity -->
+        <li id="id5">HSL</li>
+        <!-- 
+        HSL
+
+        HSL stands for hue, saturation, and lightness. This is another way to set colour properties.
+        Breaking each keyword:
+
+    Hue(h)
+             type of color. It is measured in degrees, and its value lies from 0 to 360.
+            0 degree represents black, 120 degree is for green, and 360 degree is for blue.
+    Saturation(S):
+        intensity or purity of the color. It is measured in percentage, and its value lies between 0% and 100%.
+        0% saturation is no color (grayscale), and 100% saturation is the most intense colour.
+    Lightness(L):
+        how light or dark the colour is. It is measured in percentage, and its value lies between 0% and 100%.
+        0% lightness represents pure black, 50% lightness represents normal colour, and 100% lightness is pure white. -->
+        <li id="id6">Same 5 types for background-color also.</li>
+        <li id="id7">This is an example of opacity</li>
+    </ol>
+</body>
+
+</html>

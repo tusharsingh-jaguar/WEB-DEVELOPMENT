@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- https://developer.mozilla.org/en-US/docs/Web/CSS/display => display MDN link-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property</title>
+    <!-- it sets whether an element is treated as block or inline element and the layout used for its children. -->
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            border: 2px solid red;
+            padding: 20px;
+            margin: 5px;
+        }
+
+        .cont {
+            border: 2px solid blue;
+            display: inline;
+            padding: 20px;
+            margin: 5px;
+        }
+
+        .box {
+            border: 2px solid red;
+            display: inline-block;  /* it behaves as inline but its design is like block */
+            padding: 20px;
+            margin: 5px;
+        }
+
+        .box1 {
+            /* display:none; */
+            /*this will erase the space and content of box*/
+            /* visibility:hidden; */
+            /*this will not erase the space but make its content invisible*/
+        }
+
+        .boxy {
+            border: 2px solid pink;
+            box-sizing: border-box;
+            margin: 20px;
+            padding: 20px;
+            /* display:flex; */
+            display: inline-flex;
+            justify-content: center;
+        }
+
+        /* height, width do not apply on inline and padding, margin just apply on widths not on height. */
+        #span {
+            /* background-color: pink; */
+            height: 100px;
+            width: 20px;
+            border: 2px solid black;
+            padding: 20px;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box box1">i am a box.</div>
+    <div class="cont">i am also a box.</div>
+    <div class="boxy">i am also another box.</div>
+    <span>i am a good</span>
+    <span>boy</span>
+    <section>
+        <h3>random heading</h3>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque dolorum saepe eaque unde quos quibusdam
+            consequatur, modi voluptatem quaerat repellat quis numquam voluptatibus rerum eligendi ducimus nihil tempora
+            ratione nostrum ullam exercitationem nobis. Autem, pariatur. Lorem, ipsum dolor sit amet consectetur
+            adipisicing elit. Dolor deleniti, veniam veritatis fuga sint nobis
+            odio
+            possimus autem ea voluptas facere eligendi aliquid earum, est aspernatur?<span id="span">INLINE</span> Aut
+            voluptate
+            dolore nobis tempora. Amet fugiat accusantium perspiciatis ratione libero, repellat, officia soluta
+            doloremque
+            vel eligendi nostrum reprehenderit? Quaerat ut, adipisci ducimus vel quis sequi aperiam distinctio
+            consectetur
+            nobis.
+        </div>
+    </section>
+</body>
+
+</html>

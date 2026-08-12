@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        body {
+            background-color: red;
+        }
+
+        /* SYNATAX:- @media not/only mediatype and (expressions) {CSS Code} */
+
+        @media only screen and (max-width:600px) {
+            body {
+                background-color: blue;
+            }
+
+            .boxes {
+                flex-direction: column;
+            }
+        }
+
+        /* means if width is <=600px then bgc of body will be blue and if >600px then red bgc will be applied.AND when device width is less than 600px boxes will come in column. */
+
+        .box {
+            background-color: greenyellow;
+            width: 250px;
+            height: 250px;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .boxes {
+            display: flex;
+        }
+
+        @media only screen and (orientation:landscape) {
+            body{
+                border:5px solid black;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        i am a red body.
+    </div>
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>

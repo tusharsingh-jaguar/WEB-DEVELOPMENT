@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- The Cascade Algorithm -->
+<!-- 
+CSS stands for Cascading Stylesheets. The cascade is the algorithm for solving conflicts where multiple CSS rules apply to an HTML element. It's the reason that the text of the button styled with the above CSS will be purple. (Basically the CSS which comes last will be prioritized. If specificity same then consider cascading)
+
+Understanding the cascade algorithm helps you understand how the browser resolves conflicts like this. The cascade algorithm has 4 distinct stages.
+
+1. Position and order of appearance: the order in which your CSS rules appear.
+2. Specificity: an algorithm that determines which CSS selector has the strongest match (inline > ID > class > element> universal).
+                (Basically more strog specificity will be applied on element. If specificity same then consider cascading) 
+3. Origin: the order in which CSS appears and where it comes from, whether that is a browser style, CSS from a browser extension, or your authored CSS. 
+4. Importance: some CSS rules are weighted more heavily than others, especially with the "!important" rule type
+-->
+
+<!-- INHERITANCE -->
+<!-- 
+Property of the parent element will be applied to all the children elements.
+ -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity in CSS</title>
+    <style>
+        /* The specificity of this selector is 1  */
+        h1 {
+            color: aqua;
+        }
+
+        /* The specificity of this selector is 10  */
+        .cpurple {
+            color: purple;
+        }
+
+        /* The specificity of this selector is 1 + 10 = 11  */
+        h1.yellow {
+            color: yellow;
+        }
+
+        /* This is an example of attribute selector. The specificity of this selector is 10 */
+        [data-x=a] {
+            color: maroon;
+        }
+
+        /* The specificity of this selector is 10  */
+        .cred {
+            color: red;
+        }
+
+        /* The specificity of this selector is 1 + 10 + 10 + 10 + 10 = 41  */
+        a.harryclass.rohan-class[href]:hover {
+            color: blueviolet;
+        }
+
+        h2 {
+            color: blue !important;
+        }
+
+        /* means where data-x ki value a hai vahaa background color ko red kardo */
+
+        div {
+            background-color: wheat;
+        }
+        /* here p and ul and li all inherited div properties. */
+        
+        p {
+            background-color: pink;
+        }
+        /* here we changed properties of p. */
+    </style>
+</head>
+
+<body>
+
+    <!-- https://www.codewithharry.com/tutorial/css-specificity -->
+    Inline Style > ID Selector > Class/Attribute/Pseudo-class > Element Selector > Universal Selector
+    <h1 data-x="a">CSS Specificity</h1>
+    <h2 style="color:aqua;">!Important will override inline style</h2>
+
+    <hr>
+    <h1>Inheritance</h1>
+    <div>
+        Lorem ipsum dolor sit amet.
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <ul>
+            Lorem, ipsum dolor.
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+        </ul>
+        </p>
+    </div>
+</body>
+
+</html>

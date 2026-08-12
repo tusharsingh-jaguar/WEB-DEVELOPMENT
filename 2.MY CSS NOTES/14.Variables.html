@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* GLOBAL VARIABLE - if --color is used anywhere it will take its value from :root */
+        :root {
+            --color: yellow;
+            --seccolor: rgb(255, 255, 131);
+            /* we can give any color to this variable and change it, it will change whole websites color in one go, you don't have to change it individually */
+            --defpad:45px;
+            --defop:0.75;
+        }
+        /* variables we can make our own names. */
+
+        .nav {
+            background-color:
+                /*rgb(21, 243, 239)*/
+                var(--color);
+        }
+
+        .container {
+            background-color:
+                /*rgb(181, 255, 254)*/
+                var(--seccolor);
+        }
+
+        ul li {
+            list-style-type: none;
+            padding: 23px;
+            --coloure:rgb(0, 0, 0);
+            border: 2px solid var(--coloure);
+            padding:var(--defpad);
+        }
+        /* if we give --colour:rgb(0, 0, 0); in ul li then it will be applied on every li in ul and then if we have wrote ul li:nth-child(2) {
+            background-color: var(--colour, red); bgc is goint to take --colour.  */
+
+        /* LOCAL VARIABLE - we gave this a local variable which will only work in this box */
+        ul li:first-child {
+            --color: rgb(0, 229, 255);
+            background-color: var(--color);
+            opacity:var(--defop);
+        }
+
+        ul li:nth-child(2) {
+            background-color: var(--colour, red);
+            /* --colour variable is not present in local or global variable, so we gave it a fallback color of red it will take red color in bgc. */
+        }
+
+        ul {
+            display: flex;
+            /* this will make ul horizontal */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque mollitia voluptatum nemo reiciendis odio eius,
+        velit praesentium veritatis in, vitae quis dignissimos exercitationem cupiditate harum aut assumenda
+        perspiciatis sunt officia et aperiam maiores repellat.
+    </div>
+</body>
+
+</html>

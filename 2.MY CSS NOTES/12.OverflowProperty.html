@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow Property</title>
+    <style>
+        .box{
+            width:20vw;
+            height:20vh;
+            border:2px solid black;
+            padding:30px;
+        }
+        /* --> in this the content will overflow from box. */
+        .box1{
+            width:20vw;
+            height:20vh;
+            border:2px solid black;
+            overflow:scroll;
+            padding:30px;
+            margin:50px;
+            /* overflow:auto; --> means if it overflows then show scrollbar and if not then don't show scrollbar. */
+        }
+        /* --> in this the content will not overflow from box. */
+        .box2{
+            width:20vw;
+            height:20vh;
+            border:2px solid black;
+            overflow:auto;
+            white-space:nowrap; /* it will align all texts in horizontal only */
+            /* text-overflow:ellipsis; */
+        }
+        .box3{
+            width:20vw;
+            height:20vh;
+            border:2px solid black;
+            overflow-x:hidden; 
+            /* means if text overflows in x then hide it */
+            overflow-y:scroll; 
+            /* means if text overflows in y then make a scrollbar there */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eligendi sed vitae totam impedit nam autem voluptatem. Expedita harum veritatis tempore nihil odio et est, veniam ipsam delectus cumque aliquid quidem obcaecati fugiat blanditiis consectetur quo amet culpa maxime tempora accusantium numquam! Libero iste placeat et quasi dolorum, perferendis explicabo excepturi blanditiis quos modi adipisci, ut minus eligendi labore inventore deleniti commodi officia culpa quod sunt eaque.
+    </div>
+    <div class="box1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eligendi sed vitae totam impedit nam autem voluptatem. Expedita harum veritatis tempore nihil odio et est, veniam ipsam delectus cumque aliquid quidem obcaecati fugiat blanditiis consectetur quo amet culpa maxime tempora accusantium numquam! Libero iste placeat et quasi dolorum, perferendis explicabo excepturi blanditiis quos modi adipisci, ut minus eligendi labore inventore deleniti commodi officia culpa quod sunt eaque.</div>
+    <div class="box2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eligendi sed vitae totam impedit nam autem voluptatem. Expedita harum veritatis tempore nihil odio et est, veniam ipsam delectus cumque aliquid quidem obcaecati fugiat blanditiis consectetur quo amet culpa maxime tempora accusantium numquam! Libero iste placeat et quasi dolorum, perferendis explicabo excepturi blanditiis quos modi adipisci, ut minus eligendi labore inventore deleniti commodi officia culpa quod sunt eaque.
+    </div>
+    <div class="box3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eligendi sed vitae totam impedit nam autem voluptatem. Expedita harum veritatis tempore nihil odio et est, veniam ipsam delectus cumque aliquid quidem obcaecati fugiat blanditiis consectetur quo amet culpa maxime tempora accusantium numquam! Libero iste placeat et quasi dolorum, perferendis explicabo excepturi blanditiis quos modi adipisci, ut minus eligendi labore inventore deleniti commodi officia culpa quod sunt eaque.
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Float And Clear</title>
+    <style>
+        img {
+            float:left;
+            /* img will float in left and allow content in right */
+        }
+        .cards{
+            border:3px solid black;
+            display:flow-root;
+            /* it will ensure that image will not overflow through cards border */
+        }
+        .card{
+            border:2px solid pink;
+        }
+        .card:nth-child(3){
+            background-color: aqua;
+            clear:left;
+            /* it will make the div not to allow to float img in its left. */
+        }
+    </style>
+</head>
+<body>
+    <div class="cards">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc9APxkj0xClmrU3PpMZglHQkx446nQPG6lA&s">
+        <div class="card">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam iure earum nesciunt inventore maxime quo laudantium molestias tempore, incidunt in numquam, consequatur facilis?</div>
+        <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi cumque nam est recusandae. Quod maxime enim molestias nobis atque ipsam odit, omnis asperiores. Veritatis alias rem adipisci? Accusamus sed, quaerat ipsa pariatur praesentium ducimus, doloribus, blanditiis magnam quod rem voluptatibus voluptate placeat enim aspernatur voluptas! Praesentium iusto delectus recusandae dolore nesciunt ipsa quibusdam ullam reiciendis nihil aperiam aut provident ducimus ipsum, facere mollitia, atque repellat id ea vero saepe quos veniam! Aperiam dolore, sunt molestias tempore voluptas nam nesciunt laboriosam exercitationem sed mollitia, deserunt eaque vel reprehenderit. Dolore natus rem sequi modi molestiae delectus obcaecati alias tempore error aperiam debitis odio voluptatibus nam architecto sapiente quisquam, quam fuga quibusdam minus excepturi! Neque, numquam at.
+        </div>
+        <div class="card">card 3</div>
+    </div>
+</body>
+</html>

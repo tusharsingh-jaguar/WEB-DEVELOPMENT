@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIST STYLING</title>
+    <style>
+        nav ul li{
+            /* list-style:georgian; */
+            /* background-color: red;*/
+            /* if we make it red then the marker will not come in red bgcolor */
+            /* list-style-position:inside;  */
+            /*this will make the markers inside*/
+            /* border:2px solid black; */
+            /* we can also use image of gif as a marker - uncomment the lower line */
+            /* list-style-image: url("https://img.freepik.com/free-photo/transparent-colourful-autumn-leaves_23-2148239694.jpg?semt=ais_hybrid&w=740&q=80"); */
+            /* list-style-type: "☠️"; */
+            /* we generally make list markers as none to make it as nav bar */
+            list-style:none;
+            /* then we keep it at display:flex; */
+            /* display:flex; but it will not be applied bcoz display:flex will make ul's childs come in row */
+            /* then we give padding also */
+            padding:25px;
+        }
+        nav ul{
+            display:flex;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+</body>
+</html>

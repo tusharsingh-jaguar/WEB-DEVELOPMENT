@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+    <style>
+        .box:first-child {
+            background-color: red;
+        }
+
+        /* it means if box is first-child of its parent then apply these styles */
+        /* .boxes:first-line {
+            color: aqua;
+        } */
+
+        .boxes * {
+            color: aqua;
+            border: 2px solid black;
+        }
+
+        [data-color="primary"] {
+            padding-top: 32px;
+        }
+
+        /* a, p, div {
+            css code
+        } */
+        /* we can also group and apply css code like above */
+
+        .box:nth-child(even) {
+            background-color: orange;
+        }
+
+        .box:nth-last-child(1) {
+            background-color: green;
+        }
+
+        .boxes::before {
+            content: "hey i am a before box";
+            color: blue;
+        }
+
+        /* boxes ke andar boxes se pahle isne ek main content ko daal diyaa h */
+        .boxes::after {
+            content: "hey i am a after box";
+            color: blueviolet;
+        }
+
+        ::selection {
+            color: white;
+            background-color: red;
+        }
+
+        .box::first-letter {
+            color: brown;
+            font-size: 30px;
+        }
+        input::placeholder{
+            color:red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum nulla
+            possimus, in autem,
+            minima repellat ullam et eveniet consequatur quidem consectetur sapiente sit dolor nisi aperiam numquam
+            cumque laboriosam, tempore aut a ab. Ducimus officiis laudantium facilis! Eligendi nobis tenetur quos
+            doloribus dicta nostrum illum, recusandae eius tempore pariatur voluptatum a officia ab sit saepe
+            exercitationem.</div>
+        <div class="box">hi i am a box.</div>
+        <div class="box">hi i am a box.</div>
+        <input type="text" placeholder="enter your name here">
+    </div>
+</body>
+
+</html>

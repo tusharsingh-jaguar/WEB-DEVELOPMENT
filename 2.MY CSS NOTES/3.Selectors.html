@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /* element selector */
+        div {
+            background-color: purple;
+        }
+
+        /* class selector */
+
+        /* .red - means class="red"(here . means class) */
+        .red {
+            background-color: red;
+        }
+
+        /* id selector */
+
+        /* #id1 - means id="id1"(here # means id) */
+        #id1 {
+            background-color: blue;
+        }
+
+        /* child selector */
+
+        /* p should be direct child of div otherwise style will not be applied on p */
+        div>p {
+            color: white;
+            background-color: black;
+        }
+
+        /* descendant selector */
+
+        /* it means just p should be inside of div and style will be applied */
+        div p {
+            color: pink;
+            background-color: green;
+        }
+
+        /* universal selector */
+
+        /* style will be applied on all html */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* adjacent sibling combinator */
+
+        /* <p> </p> <h3> </h3> - it means all heading3 which comes right after any paragraph (here p and h3 are siblings not parent or child of enach other) */
+        h2+h3 {
+            background-color: gold;
+        }
+
+
+        /* pseudo selectors */
+
+        /* if we have a link and after getting visited, we can give it a style */
+        a:visited {
+            color: green;
+        }
+
+        /* if we have a link and we haven't visited it, we can give it a style */
+        a:link {
+            color: red
+        }
+
+        /* if we have a link when we click it, we can give it a style */
+        a:active {
+            background-color: black;
+            color: white;
+        }
+
+        /* if we have a link when we hover on it, we can give it a style */
+        a:hover {
+            background-color: pink;
+        }
+
+        /* it means wherever p is first child of its parent change it's style changes */
+        p:first-child {
+            color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        i am a div.
+    </div><br>
+    <div class="red">
+        i am a div with class.
+    </div><br>
+    <div id="id1">
+        i am a div with id.
+    </div><br>
+    <div>
+        i am a div with para for child selector.
+        <p>i am a para and child of div.</p>
+    </div><br>
+    <div>
+        <aside>
+            <p>i am a para in aside in div.</p>
+        </aside>
+    </div><br>
+    <a href="https://www.codewithharry.com">go to codewithharry</a><br>
+    <a href="https://www.yahoo.com">go to google</a>
+    <br><br>
+    <div>
+        <p>i am a first child</p>
+        <p>i am a second child</p>
+    </div><br>
+    <span>
+        <h2>hi i am h2</h2>
+        <h3>hi i am h3</h3>
+        <h3>hi i am another h3</h3>
+    </span>
+
+</body>
+
+</html>

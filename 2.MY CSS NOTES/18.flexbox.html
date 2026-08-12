@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .container {
+            border: 5px solid red;
+            height: 80vh;
+            display: flex;
+            /* This will allow us to use flexbox properties and it will automatically arrange content from left to right. */
+            justify-content: center;
+            /* align it horizontally */
+            align-items: center;
+            /* align it vertically */
+        }
+
+        .box {
+            height: 65px;
+            width: 65px;
+            border: 2px solid black;
+            margin: 5px;
+            background-color: goldenrod;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </main>
+</body>
+
+</html>
+<!-- 70% time you are going to use this much flexbox only -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .container1 {
+            margin: 10px;
+            border: 5px solid blue;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* in flexbox items do not arrange from left to right, they arrange in flexbox-direction and by default flexbox-direction is from left to right. */
+            flex-direction: column;
+            /* flex-direction:column-reverse; */
+            /* main axis - the direction in which content is being arranged (here top to bottom), justify-content makes the content change according to the main axis */
+            /* cross axis - the direction in which content is not being arranged (here left to right) , align-items makes the content change according to the cross axis */
+        }
+
+        .box1 {
+            height: 65px;
+            width: 65px;
+            border: 2px solid black;
+            margin: 5px;
+            background-color: rgb(1, 192, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container1">
+            <div class="box1">1</div>
+            <div class="box1">2</div>
+            <div class="box1">3</div>
+            <div class="box1">4</div>
+            <div class="box1">5</div>
+            <div class="box1">6</div>
+            <div class="box1">7</div>
+            <div class="box1">8</div>
+            <div class="box1">9</div>
+            <div class="box1">10</div>
+        </div>
+    </main>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .container2 {
+            border: 5px solid rgb(255, 0, 200);
+            height: 80vh;
+            display: flex;
+            /* we are having so much content that it will start to shrink in order to attain itself in the box */
+            flex-wrap: wrap;
+            /* by using this the content will arrange itself in a way that the new content will come in next line. */
+            /* align-items: center; - if we only have one line then we use this but if we have more than one line then we will use align-content. */
+            align-content: center;
+            /* There is no justify-item in flexbox. */
+            /* flex-flow property */
+            /* flex-flow:<flex-direction><flex-wrap>; */
+            /* flex-flow:row wrap; */
+        }
+
+        .box2 {
+            height: 65px;
+            width: 65px;
+            border: 2px solid black;
+            margin: 5px;
+            background-color: rgb(1, 255, 9);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container2">
+            <div class="box2"></div>
+            <div class="box2"></div>
+            <div class="box2"></div>
+            <div class="box2"></div>
+            <div class="box2"></div>
+            <div class="box2"></div>
+            <div class="box2"></div>
+            <div class="box2"></div>
+            <div class="box2"></div>
+            <div class="box2"></div>
+            <div class="box2"></div>
+            <div class="box2"></div>
+            <div class="box2"></div>
+            <div class="box2"></div>
+            <div class="box2"></div>
+            <div class="box2"></div>
+            <div class="box2"></div>
+            <div class="box2"></div>
+            <div class="box2"></div>
+            <div class="box2"></div>
+            <div class="box2"></div>
+            <div class="box2"></div>
+            <div class="box2"></div>
+            <div class="box2"></div>
+            <div class="box2"></div>
+            <div class="box2"></div>
+            <div class="box2"></div>
+            <div class="box2"></div>
+            <div class="box2"></div>
+            <div class="box2"></div>
+        </div>
+    </main>
+</body>
+
+</html>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .container3 {
+            margin: 10px;
+            border: 5px solid rgb(255, 166, 0);
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            align-content: flex-start;
+            /* flex-flow property --> flex-flow:<flex-direction><flex-wrap>;*/
+            flex-flow: row wrap;
+            gap: 15px;
+            /* gives gap in row and column both */
+            /* to give gap in only column or only row, use cloumn-gap or row-gap */
+            /* can also be writen like --> gap: row-gap coloumn-gap; */
+        }
+
+        .box3 {
+            height: 65px;
+            width: 65px;
+            border: 2px solid black;
+            background-color: rgb(255, 1, 238);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container3">
+            <div class="box3"></div>
+            <div class="box3"></div>
+            <div class="box3"></div>
+            <div class="box3"></div>
+            <div class="box3"></div>
+            <div class="box3"></div>
+            <div class="box3"></div>
+            <div class="box3"></div>
+            <div class="box3"></div>
+            <div class="box3"></div>
+            <div class="box3"></div>
+            <div class="box3"></div>
+            <div class="box3"></div>
+            <div class="box3"></div>
+            <div class="box3"></div>
+            <div class="box3"></div>
+            <div class="box3"></div>
+            <div class="box3"></div>
+            <div class="box3"></div>
+            <div class="box3"></div>
+            <div class="box3"></div>
+            <div class="box3"></div>
+            <div class="box3"></div>
+            <div class="box3"></div>
+            <div class="box3"></div>
+
+        </div>
+    </main>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .container4 {
+            border: 5px solid magenta;
+            height: 80vh;
+            width: 90vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2px;
+        }
+
+        .item {
+            height: 65px;
+            width: 65px;
+            background-color: pink;
+            flex-grow: 1;
+        }
+
+        /* ITEM PROPERTY */
+        /* ORDER - default order = 0, element with more order will come in end */
+        .order-1 {
+            order: 1;
+        }
+
+        .order-2 {
+            order: 2;
+        }
+
+        /* FELX-GROW - all items having flex-grow: 1 will take equal space in width but the item with flex-grow: 2 will take 2 times space now */
+        .item1 {
+            flex-grow: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container4">
+            <div class="item item1 order-1">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item order-1">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item order-2">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+        </div>
+    </main>
+</body>
+
+</html>

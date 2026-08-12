@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- 1.Inline:- add style attribute in tag only. Not a good practice(in inline CSS we have to add on every tag) -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AddingCSStoHTML</title>
+</head>
+
+<body>
+    <h1>1.Inline</h1>
+    <h2 style="color :yellow;background-color:black;">About me</h2>
+    <p> I am a good boy</p>
+    <hr>
+</body>
+
+</html>
+<!-- 2.Internal:- make a style tag in head tag.Better than inline can do bulk edit(just add once and all selectors will be changed) -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AddingCSStoHTML</title>
+    <style>
+        h2 {
+            color: blue;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>2.Internal</h1>
+    <h2>About me</h2>
+    <p> I am a good boy</p>
+    <hr>
+</body>
+
+</html>
+<!-- 3.External:- make another CSS file and write CSS code there and then link HTML and CSS file together. If CSS code is big than it will create a mess in internal CSS so we use External CSS. Also when we make big projects we have to write style tag for different styles again and again as we have many html web pages in a single website -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AddingCSStoHTML</title>
+    <link rel="stylesheet" href="2.CSSfile.css"> 
+    <!-- rel - relation of html and that file & href - CSS file name or file path(if in different folder) -->
+</head>
+
+<body>
+    <h1>3.External</h1>
+    <h3>About me</h3>
+    <p> I am a good boy</p>
+    <hr>
+</body>
+
+</html>
